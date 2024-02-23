@@ -1,0 +1,9 @@
+module mux2_1(
+  input i0,i1,s0,
+  output y);
+  wire p,r,s;
+  not(p,s0);
+  and(r,i0,p);
+  and(s,i1,s0);
+  or(y,r,s);
+endmodule
