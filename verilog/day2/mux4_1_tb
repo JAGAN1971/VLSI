@@ -1,0 +1,24 @@
+module mux4_1_tb;
+  reg i0,i1,i2,i3,s1,s0;
+  wire y;
+  
+  mux4_1 mux4_1 (.i0(i0), .i1(i1), .i2(i2), .i3(i3), .s1(s1), .s0(s0), .y(y));
+  initial begin
+    $dumpfile("mux4_1.vcd");
+    $dumpvars(1, mux4_1_tb);
+    $monitor("i0=%0d i1=%0d i2=%0d i3=%0d s1=%0d s0=%0d y=%0d",i0,i1,i2,i3,s1,s0, y);
+  end
+  initial begin
+    i0=1'b1; i1=1'b0; i2=1'b0; i3=1'b0; s0=1'b0; s1=1'b0;
+    #15
+    i0=1'b0; i1=1'b1; i2=1'b0; i3=1'b0; s0=1'b1; s1=1'b0;
+    #15
+    i0=1'b0; i1=1'b0; i2=1'b1; i3=1'b0; s0=1'b0; s1=1'b1;
+    #15
+    i0=1'b0; i1=1'b0; i2=1'b0; i3=1'b1; s0=1'b1; s1=1'b1;
+    #15
+    $finish;
+  end
+endmodule
+    
+  
