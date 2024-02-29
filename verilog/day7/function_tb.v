@@ -1,6 +1,6 @@
 
 module function_tb;
-  integer a;
+  integer a;//a is dlobal variable
   task multi (input int x,y);
     begin
       a=x*y;
