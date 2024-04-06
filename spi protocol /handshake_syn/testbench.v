@@ -22,6 +22,8 @@ handshake_syn uut (
 initial begin
     $monitor("Time=%0t: pclk=%b, spi_clk=%b, preset_n=%b, penable=%b, pready=%b, spi_enable=%b, spi_ready=%b",
              $time, pclk, spi_clk, preset_n, penable, pready, spi_enable, spi_ready);
+  $dumpfile("handshake_syn.vcd");
+  $dumpvars(1, handshake_syn_tb);
     
     // Randomize initial values
     pclk = 0;
