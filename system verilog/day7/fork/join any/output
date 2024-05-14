@@ -1,0 +1,8 @@
+xcelium> run
+process_a start @0ns
+process_b start @0ns
+process_a finish @5ns
+out of fock block @0000000000000000000005tns
+process_b finish @10ns
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
