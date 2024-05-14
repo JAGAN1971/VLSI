@@ -1,0 +1,7 @@
+# run -all
+# process_a start @0ns
+# process_b start @0ns
+# process_a finish @5ns
+# process_b finish @10ns
+# out of fock block @0000000000000000000012tns
+# exit
